@@ -1,0 +1,122 @@
+\documentclass[a4paper,11pt,fleqn,dvipsnames,oneside,openright]{memoir} 
+%\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+%\usepackage{pdfpages}
+%\usepackage{setspace}
+%\usepackage{geometry}
+\usepackage[export]{adjustbox}
+\usepackage{tabu}
+\usepackage{Preamble}
+\usepackage{graphicx}
+\usepackage[bottom]{footmisc}
+\usepackage{float}
+
+\usepackage{tocloft}
+ 
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
+
+\newcommand{\forceindent}{\leavevmode{\parindent=3em\indent}}
+
+\addbibresource{references.bib} %Tilføjer kildeliste
+
+\begin{document}
+
+\title{\includegraphics[width=10cm]{MujiLogo.png}}
+\maketitle
+
+\section*{Marketing - The Essentials and the Trend Drivers}
+
+Mads Jørgsholm Bierrings\\
+CPR-nr: 240793-1621\\
+Business Administration and Information Systems, HA(it.) \\
+5th semester\\
+Examiner: Manisha Bachheti\\
+Copenhagen Business School 2017/2018\\
+Hand in date: 15th December 2017\\
+10 Normal pages, 23.250 characters (22.450 + 800)\\
+
+\newpage
+
+\tableofcontents*
+\addtocontents{toc}{~\vspace{-2\baselineskip}}
+\thispagestyle{empty}
+
+\mainmatter 
+
+\chapter{Introduction}
+\input{Introduction.tex}
+
+\chapter{Consumer positioning in Denmark}
+\label{Chapter2}
+\section{Introduction and delimitation}
+\input{ConsumerPositioning/Introduction.tex}
+\subsection{Segmentation}
+\input{ConsumerPositioning/Segmentation.tex}
+\subsection{Targeting (SOCC analysis)}
+\input{ConsumerPositioning/Targeting.tex}
+\subsection{Positioning (The 4 P's)}
+\input{ConsumerPositioning/Positioning.tex}
+\section{Summary}
+\input{ConsumerPositioning/Summary.tex}
+
+
+\chapter{Pricing strategy}
+\label{Chapter3}
+\section{Introduction and delimitation}
+\input{PricingStrategy/Introduction.tex}
+\section{Porters 5 Forces}
+\input{PricingStrategy/FiveForces.tex}
+\section{Pricing strategy}
+\input{PricingStrategy/PricingStrategy.tex}
+\section{Summary}
+\input{PricingStrategy/Summary.tex}
+
+\chapter{Future trends}
+\section{Introduction}
+\input{FutureTrends/Introduction.tex}
+\section{Trends}
+\input{FutureTrends/Trends.tex}
+
+\chapter{Cultural aspects}
+\section{Introduction}
+\input{CulturalAspects/Introduction.tex}
+\section{Cultural aspects of working in Denmark}
+\input{CulturalAspects/Culture.tex}
+\section{Cultural impact on advertising}
+\input{CulturalAspects/Advertising.tex}
+
+\chapter{Conclusion}
+\input{Conclusion.tex}
+
+
+
+
+% Kildeliste - brug \cite{} ved henvisning
+\begingroup
+	\raggedright
+	\printbibliography
+\endgroup 
+
+% Bilag - brug \ref{} ved henvisning
+\appendix
+\chapter{Appendix}
+\numberwithin{equation}{section}
+
+\section{Competitors}
+\label{Competitors}
+\input{Appendix/Competitors.tex}
+
+\section{Residents by age in Denmark}
+\label{ResidentsAge}
+\input{Appendix/Residents.tex}
+
+\section{Disposable income for people living in Denmark}
+\label{DisposableIncome}
+\input{Appendix/DisposableIncome.tex}
+
+\section{The business culture in Japan vs. in Denmark}
+\label{CultureComparison}
+\input{Appendix/Culture.tex}
+
+\end{document}
